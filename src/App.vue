@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <div>
+    <h3>My Identicon Generator</h3>
   </div>
+  <div>
+  Input:
+  <input v-on:input="onInput" />
+  </div>
+
+  <div>
+  Output:
+  <div v-html="identicon"></div>
+  </div>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+el: '#app',
+data: { // Initialize our list of 'ingredients'
+textInput: ''
+},
+computed: { // Turn data into viewable values
+identicon: function() {
+return jdenticon.toSvg(this.textInput, 200);
+}
+},
+methods: { // Use these functions to change data
+onInput: function(event) {
+this.textInput = event.target.value;
+}
+}
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
