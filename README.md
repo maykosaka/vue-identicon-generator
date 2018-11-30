@@ -1,29 +1,32 @@
-# my-identicon-generator
+# vue-identicon-generator
+Web app which renders a unique identicon for any input that the user types in.
 
-## Project setup
+## Prerequisites and installing
+To run this app, you need npm installed. If you're not sure if you already have npm, run the below command to check. If you don't have npm, create an account at npmjs.com and follow their instructions.
+```
+npm -v
+```
+
+Git clone the project
+```
+git clone https://github.com/maykosaka/vue-identicon-generator.git
+```
+
+cd into the project
+```
+cd vue-identicon-generator
+```
+
+Install dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Start up the server
 ```
 npm run serve
 ```
+If your browser doesn't automatically open to the project then go to the url shown, something like http://localhost:8080/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Author
+May Kosaka
